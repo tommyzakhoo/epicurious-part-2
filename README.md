@@ -1,6 +1,6 @@
 
 # Epic Curiousity - Part 2
-### Predicting Recipe Ratings with Linear Regression
+### Checking the Quality of Our Classifier
 
 <p align="left">
   <img src="https://raw.githubusercontent.com/tommyzakhoo/epicurious/master/painting.jpg", width="400">
@@ -18,11 +18,15 @@ Work in progress. Last update: 26 August 2018.
 
 ## Tools and Techniques
 
-Python, Cross Validation, Linear Regression
+Python, Monte Carlo Cross Validation
 
 ## Motivation And Project Description
 
-## What Determines Rating
+## Monte Carlo Cross Validation
+
+## Confusion Matrix
+
+## ROC, AUC, Gini Coefficient
 
 
 ```python
