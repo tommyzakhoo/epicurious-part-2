@@ -14,7 +14,10 @@ Work in progress. Last update: 26 August 2018.
 ### Table of contents
 
 - [Motivation And Project Description](#motivation-and-project-description)
-- [What Determines Rating](#what-determines-rating)
+- [Confusion Matrix](#confusion-matrix)
+- [ROC, AUC, Gini Coefficient](#roc-auc-gini-coefficient)
+- [Monte Carlo Cross Validation](#monte-carlo-cross-validation)
+- [Future Directions](#future-directions)
 
 ## Tools and Techniques
 
@@ -22,11 +25,11 @@ Python, Monte Carlo Cross Validation
 
 ## Motivation And Project Description
 
-## Monte Carlo Cross Validation
-
 ## Confusion Matrix
 
 ## ROC, AUC, Gini Coefficient
+
+## Monte Carlo Cross Validation
 
 ## Future Directions
 
