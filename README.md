@@ -1,6 +1,6 @@
 
 # Epic Curiousity - Part 2
-### Checking the Quality of Our Classifier
+### Checking the Quality of the Recipe Classifier
 
 <p align="left">
   <img src="https://raw.githubusercontent.com/tommyzakhoo/epicurious/master/painting.jpg", width="400">
