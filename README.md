@@ -32,6 +32,8 @@ Python, Monte Carlo Cross Validation
 
 This Epicurious dataset
 
+<!--
+
 ```python
 s = "Python syntax highlighting"
 print s
