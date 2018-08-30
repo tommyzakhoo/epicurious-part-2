@@ -9,7 +9,7 @@
 </p>
 
 ## Status
-Work in progress. Last update: 26 August 2018.
+Work in progress. Last update: 29 August 2018.
 
 ### Table of contents
 
