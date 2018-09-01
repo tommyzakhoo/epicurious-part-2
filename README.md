@@ -1,6 +1,6 @@
 
 # Epic Curiousity - Part 2
-### Checking the Quality of the Recipe Classifier
+### Monte-Carlo Cross Validation and Checking the Quality of the Recipe Classifier
 
 <p align="left">
   <img src="https://raw.githubusercontent.com/tommyzakhoo/epicurious/master/painting.jpg", width="400">
@@ -9,7 +9,7 @@
 </p>
 
 ## Status
-Work in progress. Last update: 29 August 2018.
+Work in progress. Last update: 1st September 2018.
 
 ### Table of contents
 
