@@ -29,11 +29,20 @@ In part 1 of this project, I built a classifier for labeling Epicurious recipes 
 
 ## Monte-Carlo Cross Validation
 
-In part 1, cross validation was done using a simple "holdout" method: 291 recipes were selected at random to be in a test set, while the remaining 2000 make up the training set. Here, I implemented a restricted version of [Monte-Carlo cross validation](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) in which I repeat the holdout method with a new, randomly selected, test set each time.
+In part 1, cross validation was done using a simple "holdout" method: 291 recipes were selected at random to be in a test set, while the remaining 2000 make up the training set. Here, I implemented a restricted version of [Monte-Carlo cross validation](https://en.wikipedia.org/wiki/Cross-validation_(statistics)#Repeated_random_sub-sampling_validation) in which I repeat the holdout method with a new, randomly selected, test set each time.
 
+The code from the part 1 is easily put inside a loop or a function, to generate 
 
 
 ## Confusion Matrix
+
+The [confusion matrix](https://en.wikipedia.org/wiki/Confusion_matrix) is a way of presenting the performance of our model with a table. This table is also call a "matrix" in mathematics.
+
+The rows i of this matrix are the predicted class of data points, while the columns j are the actual labels. Thus, number in the (i,j)-th entry of this matrix is the number of recipes that are classified as i while they are actually j. For this project, the classes or labels are breakfast, lunch or dinner.
+
+Note that a diagonal (i,i)-th entry of the matrix shows the number of recipes correctly classified as label i. If my classifier somehow has perfect accuracy, all non-diagonal entries would be zero, and the sum of diagonal entries would be 
+
+What are these data points though? I chose to run the Monte-Carlo Cross Validation an arbitrary number of times, and built the confusion matrix based on the classification and true labels of all the test sets combined.
 
 
 
