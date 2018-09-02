@@ -49,13 +49,13 @@ plt.ylabel('Counts')
 plt.title('')
 plt.show() # customize axes labels and title, before drawing on screen
 ```
-Pandas dataframees have their own method for plotting histograms. Using the code above, I produced a histogram for my 1000 scores below.
+Pandas dataframes have their own method for plotting histograms. Using the code above, I produced a histogram for my 1000 scores below.
 
 <p align="left">
-  <img src="https://raw.githubusercontent.com/tommyzakhoo/epicurious/master/histogram.png", width="400">
+  <img src="https://raw.githubusercontent.com/tommyzakhoo/epicurious-part-2/master/histogram.png", width="400">
 </p>
 
-The average for these 1000 scores is 
+The average for these 1000 scores is 252.812, which is an average accuracy of 87.17%. I built the classifier using a simple method, so there are definitely room for improvement, but this is not bad for a start!
 
 ## Confusion Matrix
 
@@ -70,6 +70,7 @@ What are these data points though? I chose to run the Monte-Carlo Cross Validati
 
 
 ## ROC, AUC, Gini Coefficient
+
 
 
 
