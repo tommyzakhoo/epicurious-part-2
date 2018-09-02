@@ -39,16 +39,21 @@ The code from the part 1 is easily put inside a loop or a function and repeated.
 import matplotlib.pyplot as plt # library for plotting data
 import pandas as pd
 
-scores = pd.read_csv('scores_1000.csv')
-scores.hist()
+plt.rcParams.update({'font.size': 22}) # font size in histogram plot
+
+scores = pd.read_csv('scores_1000.csv',header=None) # load the 1000 scores
+scores.hist() # plot a histogram
 
 plt.xlabel('Scores')
 plt.ylabel('Counts')
 plt.title('')
-plt.rcParams.update({'font.size': 22})
-plt.show()
+plt.show() # customize axes labels and title, before drawing on screen
 ```
-Pandas dataframees have a usual method for plotting histograms. Using the code above, I produced a histogram for my 1000 scores below.
+Pandas dataframees have their own method for plotting histograms. Using the code above, I produced a histogram for my 1000 scores below.
+
+<p align="left">
+  <img src="https://raw.githubusercontent.com/tommyzakhoo/epicurious/master/histogram.png", width="400">
+</p>
 
 The average for these 1000 scores is 
 
