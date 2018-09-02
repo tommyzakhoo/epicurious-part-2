@@ -65,7 +65,7 @@ The rows i of this matrix are the predicted class of data points, while the colu
 
 Note that a diagonal (i,i)-th entry of the matrix shows the number of recipes correctly classified as label i. If my classifier somehow has perfect accuracy, all non-diagonal entries would be zero, and the sum of diagonal entries would equal the number of data points.
 
-What are these data points though? I chose to run the Monte-Carlo Cross Validation an arbitrary 20 number of times, and built the confusion matrix based on the classification and true labels of all the test sets combined. This is done using the confusion_matrix class from sklearn. Code and output are show below.
+What are these data points though? I chose to run the Monte-Carlo Cross Validation an arbitrary 20 number of times for illustration, and built the confusion matrix based on the classification and true labels of all the test sets combined. This is done using the confusion_matrix class from sklearn. Code and output are show below.
 
 ```python
 import pandas as pd
@@ -79,6 +79,8 @@ confusion_matrix(true_labels,classified_labels)
 <p align="left">
   <img src="https://raw.githubusercontent.com/tommyzakhoo/epicurious-part-2/master/confusion_matrix.png">
 </p>
+
+I computed these from the confusion matrix: number of data points = 5820, accuracy = (982 + 875 + 3219) / 5820 = 87.2164%, misclassification rate = 1 - accuracy = 12.7835%. Since this is multi-class classification, I cannot calculate true/false positive rates, specificity, precision, prevalence etc.
 
 ## ROC, AUC, Gini Coefficient
 
