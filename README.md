@@ -16,12 +16,12 @@ Work in progress. Last update: 2 September 2018.
 - [Motivation And Project Description](#motivation-and-project-description)
 - [Monte Carlo Cross Validation](#monte-carlo-cross-validation)
 - [Confusion Matrix](#confusion-matrix)
-- [ROC, AUC, Gini Coefficient](#roc-auc-gini-coefficient)
-- [Future Directions](#future-directions)
+- [ROC and AUC](#roc-and-auc)
+- [Summary and Final Thoughts](#summary-and-final-thoughts)
 
 ## Tools, Techniques and Concepts
 
-Python, Monte Carlo Cross Validation, Confusion Matrix, Receiver Operating Characteristic (ROC) Curve, Area Under the Curve (AUC), Gini Index
+Python, Monte Carlo Cross Validation, Confusion Matrix, Receiver Operating Characteristic (ROC) Curve, Area Under the Curve (AUC)
 
 ## Motivation And Project Description
 
@@ -82,13 +82,17 @@ confusion_matrix(true_labels,classified_labels)
 
 I computed these from the confusion matrix: number of data points = 5820, accuracy = (982 + 875 + 3219) / 5820 = 87.2164%, misclassification rate = 1 - accuracy = 12.7835%. Since this is multi-class classification, I cannot calculate true/false positive rates, specificity, precision, prevalence etc.
 
-## ROC, AUC, Gini Coefficient
+## ROC and AUC
 
+In this section, I will be using the Receiver Operating Characteristic (ROC) Curve to evaluate my classifier. Since the usual ROC curve is for binary classification but what I have done here is one-vs-all multi-class classification, I am going to treat plot three ROC curves.
 
+The ROC curve is a plot of the true positive rate vs. the false positive rate as the discrimination threshold is increased. For my logistic regression model, the discrimination threshold is the theshold predicted probability beyond which a recipe would be classified as breakfast, lunch or dinner. Note that so far I have been using 
 
-## Future Directions
+Area Under the Curve (AUC)
 
-This Epicurious dataset
+## Summary and Final Thoughts
+
+This Epicurious dataset contains an abundant of data and this project have only scratched the tip of the iceberg.
 
 <!--
 
@@ -96,47 +100,5 @@ This Epicurious dataset
 s = "Python syntax highlighting"
 print s
 ```
-
-This project is a part of the [Data Science Working Group](http://datascience.codeforsanfrancisco.org) at [Code for San Francisco](http://www.codeforsanfrancisco.org).  Other DSWG projects can be found at the [main GitHub repo](https://github.com/sfbrigade/data-science-wg).
-
-#### -- Project Status: [Active, On-Hold, Completed]
-
-## Project Intro/Objective
-The purpose of this project is ________. (Describe the main goals of the project and potential civic impact. Limit to a short paragraph, 3-6 Sentences)
-
-### Partner
-* [Name of Partner organization/Government department etc..]
-* Website for partner
-* Partner contact: [Name of Contact], [slack handle of contact if any]
-* If you do not have a partner leave this section out
-
-### Methods Used
-* Inferential Statistics
-* Machine Learning
-* Data Visualization
-* Predictive Modeling
-* etc.
-
-### Technologies
-* R 
-* Python
-* D3
-* PostGres, MySql
-* Pandas, jupyter
-* HTML
-* JavaScript
-* etc. 
-
-## Project Description
-(Provide more detailed overview of the project.  Talk a bit about your data sources and what questions and hypothesis you are exploring. What specific data analysis/visualization and modelling work are you using to solve the problem? What blockers and challenges are you facing?  Feel free to number or bullet point things here)
-
-## Needs of this project
-
-- frontend developers
-- data exploration/descriptive statistics
-- data processing/cleaning
-- statistical modeling
-- writeup/reporting
-- etc. (be as specific as possible)
-
 -->
+
