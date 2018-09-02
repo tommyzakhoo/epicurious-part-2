@@ -9,27 +9,33 @@
 </p>
 
 ## Status
-Work in progress. Last update: 1st September 2018.
+Work in progress. Last update: 1 September 2018.
 
 ### Table of contents
 
 - [Motivation And Project Description](#motivation-and-project-description)
+- [Monte Carlo Cross Validation](#monte-carlo-cross-validation)
 - [Confusion Matrix](#confusion-matrix)
 - [ROC, AUC, Gini Coefficient](#roc-auc-gini-coefficient)
-- [Monte Carlo Cross Validation](#monte-carlo-cross-validation)
 - [Future Directions](#future-directions)
 
-## Tools and Techniques
+## Tools, Techniques and Concepts
 
-Python, Monte Carlo Cross Validation
+Python, Monte Carlo Cross Validation, Confusion Matrix, Receiver Operating Characteristic (ROC) Curve, Area Under the Curve (AUC), Gini Index
 
 ## Motivation And Project Description
+
+In part 1 of this project, I built a classifier for labeling Epicurious recipes as breakfast, lunch or dinner that had a 86.25% accuracy on the test set. Simple cross validation was used to evaluate the classifier. In this part of the project, I will implement better cross validation and classifier evaluation.
+
+## Monte-Carlo Cross Validation
+
+
 
 ## Confusion Matrix
 
 ## ROC, AUC, Gini Coefficient
 
-## Monte Carlo Cross Validation
+
 
 ## Future Directions
 
