@@ -9,7 +9,7 @@
 </p>
 
 ## Status
-Work in progress. Last update: 1 September 2018.
+Work in progress. Last update: 2 September 2018.
 
 ### Table of contents
 
@@ -29,9 +29,13 @@ In part 1 of this project, I built a classifier for labeling Epicurious recipes 
 
 ## Monte-Carlo Cross Validation
 
+In part 1, cross validation was done using a simple "holdout" method: 291 recipes were selected at random to be in a test set, while the remaining 2000 make up the training set. Here, I implemented a restricted version of [Monte-Carlo cross validation](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) in which I repeat the holdout method with a new, randomly selected, test set each time.
+
 
 
 ## Confusion Matrix
+
+
 
 ## ROC, AUC, Gini Coefficient
 
