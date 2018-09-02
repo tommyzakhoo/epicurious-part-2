@@ -63,14 +63,24 @@ The [confusion matrix](https://en.wikipedia.org/wiki/Confusion_matrix) is a way 
 
 The rows i of this matrix are the predicted class of data points, while the columns j are the actual labels. Thus, number in the (i,j)-th entry of this matrix is the number of recipes that are classified as i while they are actually j. For this project, the classes or labels are breakfast, lunch or dinner.
 
-Note that a diagonal (i,i)-th entry of the matrix shows the number of recipes correctly classified as label i. If my classifier somehow has perfect accuracy, all non-diagonal entries would be zero, and the sum of diagonal entries would be 
+Note that a diagonal (i,i)-th entry of the matrix shows the number of recipes correctly classified as label i. If my classifier somehow has perfect accuracy, all non-diagonal entries would be zero, and the sum of diagonal entries would equal the number of data points.
 
-What are these data points though? I chose to run the Monte-Carlo Cross Validation an arbitrary number of times, and built the confusion matrix based on the classification and true labels of all the test sets combined.
+What are these data points though? I chose to run the Monte-Carlo Cross Validation an arbitrary 20 number of times, and built the confusion matrix based on the classification and true labels of all the test sets combined. This is done using the confusion_matrix class from sklearn. Code and output are show below.
 
+```python
+import pandas as pd
+from sklearn.metrics import confusion_matrix # confusion matrix class
 
+true_labels = pd.read_csv('true_labels.csv',header=None)
+classified_labels = pd.read_csv('classified_labels.csv',header=None)
+
+confusion_matrix(true_labels,classified_labels)
+```
+<p align="left">
+  <img src="https://raw.githubusercontent.com/tommyzakhoo/epicurious-part-2/master/confusion_matrix.png", width="400">
+</p>
 
 ## ROC, AUC, Gini Coefficient
-
 
 
 
