@@ -29,10 +29,28 @@ In part 1 of this project, I built a classifier for labeling Epicurious recipes 
 
 ## Monte-Carlo Cross Validation
 
-In part 1, cross validation was done using a simple "holdout" method: 291 recipes were selected at random to be in a test set, while the remaining 2000 make up the training set. Here, I implemented a restricted version of [Monte-Carlo cross validation](https://en.wikipedia.org/wiki/Cross-validation_(statistics)#Repeated_random_sub-sampling_validation) in which I repeat the holdout method with a new, randomly selected, test set each time.
+In part 1, cross validation was done using a simple "holdout" method: 291 recipes were selected at random to be in a test set, while the remaining 2000 make up the training set. 
 
-The code from the part 1 is easily put inside a loop or a function, to generate 
+Here, I implemented a restricted version of [Monte-Carlo cross validation](https://en.wikipedia.org/wiki/Cross-validation_(statistics)#Repeated_random_sub-sampling_validation) in which I repeat the holdout method with a new, randomly selected, test set each time. A score (number of correctly classified recipes out of 291), is also computed each time. I then took the average of these scores.
 
+The code from the part 1 is easily put inside a loop or a function and repeated. I did this for 1000 times and gathered the scores in a csv file here: [scores_1000.csv](scores_1000.csv). 
+
+```python
+import matplotlib.pyplot as plt # library for plotting data
+import pandas as pd
+
+scores = pd.read_csv('scores_1000.csv')
+scores.hist()
+
+plt.xlabel('Scores')
+plt.ylabel('Counts')
+plt.title('')
+plt.rcParams.update({'font.size': 22})
+plt.show()
+```
+Pandas dataframees have a usual method for plotting histograms. Using the code above, I produced a histogram for my 1000 scores below.
+
+The average for these 1000 scores is 
 
 ## Confusion Matrix
 
