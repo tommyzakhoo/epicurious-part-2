@@ -100,10 +100,39 @@ fpr, tpr, thresholds = metrics.roc_curve(breakfast_true,breakfast_proba,pos_labe
 plt.plot(fpr,tpr) # plot the false positive rates (fpr) on the x-axis, and true positive rates (tpr
 plt.show()
 ```
+<p align="left">
+  <img src="https://raw.githubusercontent.com/tommyzakhoo/epicurious-part-2/master/B_roc.png", width="600">
+</p>
 
+<p align="left">
+  <img src="https://raw.githubusercontent.com/tommyzakhoo/epicurious-part-2/master/L_roc.png", width="600">
+</p>
 
+<p align="left">
+  <img src="https://raw.githubusercontent.com/tommyzakhoo/epicurious-part-2/master/D_roc.png", width="600">
+</p>
 
-Area Under the Curve (AUC) refers to the area under the ROC Curve. This is an indicator of how good
+Area Under the Curve (AUC) refers to the area under the ROC Curve. This is an indicator of how good the model is at making the 
+
+Once I have the fpr and tpr from before, all I have to do to get the AUC is to use the line of code below.
+
+```python
+metrics.auc(fpr, tpr)
+```
+The AUC for all 30 ROC curves, to four significant figures, are listed in the table below.
+
+| Breakfast | Lunch       | Dinner       |
+| :-:       | :-:         | :-:          |
+|0.9818     |0.9392       |0.9450        |
+|0.9772     |0.9141       |0.9495        |
+|0.9644     |0.9088       |0.9406        |
+|0.9647     |0.9096       |0.9503        |
+|0.96788    |0.9328       |0.9466        |
+|0.9824     |0.9181       |0.9443        |
+|0.9656     |0.9131       |0.9456        |
+|0.9638     |0.9285       |0.9571        |
+|0.9582     |0.9352       |0.9400        |
+|0.9684     |0.9428       |0.9500        |
 
 ## Summary and Final Thoughts
 
