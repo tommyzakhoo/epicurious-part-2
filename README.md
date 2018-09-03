@@ -13,6 +13,7 @@ Work in progress. Last update: 2 September 2018.
 
 ### Table of contents
 
+- [Tools, Techniques and Concepts](#tools-techniques-and-concepts)
 - [Motivation And Project Description](#motivation-and-project-description)
 - [Monte Carlo Cross Validation](#monte-carlo-cross-validation)
 - [Confusion Matrix](#confusion-matrix)
@@ -112,7 +113,13 @@ plt.show()
   <img src="https://raw.githubusercontent.com/tommyzakhoo/epicurious-part-2/master/D_roc.png", width="600">
 </p>
 
-Area Under the Curve (AUC) refers to the area under the ROC Curve. This is an indicator of how good the model is at making the 
+The ROC curves for each meal type is plotted above. It has a simple interpretation. 
+
+For example, in the case of breakfast, if I classify very few recipes as breakfast, by setting the threshold to something high like 0.90 probability, then I will make a lot less mistakes. So,the false positive rate will be low. However, the tradeoff is that very few recipes that are actually breakfast will get labeled as breakfast (true positive) too.
+
+On the other hand, if I set the threshold for being labeled breakfast to a very low value, say 0.05 probability, I will make a lot of mistakes (false positives). However, a lot of the breakfast recipes will be labeled correctly as well (true positives).
+
+The ROC curve is a visualization of this tradeoff. The "Area Under the Curve" (AUC) refers to the area under the ROC curve. This is an indicator of how good the model is at making this tradeoff. Higher AUC means better model.
 
 Once I have the fpr and tpr from before, all I have to do to get the AUC is to use the line of code below.
 
@@ -134,11 +141,20 @@ The AUC for all 30 ROC curves, to four significant figures, are listed in the ta
 |0.9582     |0.9352       |0.9400        |
 |0.9684     |0.9428       |0.9500        |
 
+I would say these are very good numbers! Surprising for such a simpe model. 
+
+Perhaps breakfast, lunch, dinner recipes are just relatively easy to tell apart. The AUC numbers are best for breakfast recipes, which is not surprising since I have seen in part 1 that this population prefers to consume certain things like eggs only during breakfast. Lunch fared the worst, probably because many lunch dishes can also be eaten for dinner, and bread can be used in both lunch and breakfast recipes.
+
 ## Summary and Final Thoughts
 
+Again, the following is a short summary of what I did here.
 
+- Implemented Monte-Carlo cross validation.
+- Evaluated the model with a confusion matrix.
+- Plotted ROC curve and calculated AUC values for the model.
+- Obtained good AUC numbers, ranging from 0.9088 to 0.9818.
 
-This Epicurious dataset contains an abundant of data, and this project have only scratched the tip of the iceberg. I look forward to 
+This concludes my small project. The Epicurious dataset contains an abundant of data, and this project have only scratched the tip of the iceberg. I look forward to doing more with it!
 
 <!--
 
