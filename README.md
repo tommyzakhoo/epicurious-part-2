@@ -84,15 +84,32 @@ I computed these from the confusion matrix: number of data points = 5820, accura
 
 ## ROC and AUC
 
-In this section, I will be using the Receiver Operating Characteristic (ROC) Curve to evaluate my classifier. Since the usual ROC curve is for binary classification but what I have done here is one-vs-all multi-class classification, I am going to treat plot three ROC curves.
+In this section, I will be using the Receiver Operating Characteristic (ROC) Curve to evaluate my classifier. Since the usual ROC curve is for binary classification, but what I have done here is one-vs-all multi-class classification, I am going to treat plot three ROC curves.
 
-The ROC curve is a plot of the true positive rate vs. the false positive rate as the discrimination threshold is increased. For my logistic regression model, the discrimination threshold is the theshold predicted probability beyond which a recipe would be classified as breakfast, lunch or dinner. Note that so far I have been using 
+The ROC curve is a plot of the true positive rate vs. the false positive rate as the discrimination threshold is increased. For my logistic regression model, the discrimination threshold is the theshold predicted probability beyond which a recipe would be classified as breakfast, lunch or dinner. Note that so far I have been using the "default" 0.5 threshold, which simply means the label with the highest probability is chosen to be the predicted label.
 
-Area Under the Curve (AUC)
+Again, the code from part 1 is easily modified to do this. For example, once I modify the code to give me the true labels for breakfast recipes in the test set (breakfast_true), and the probabilities produced by the logistic regression model (breakfast_proba), I could use the code below to get the false positive rates (fpr), true positive rates (tpr) for various discrimination thresholds.
+
+```python
+
+import matplotlib.pyplot as plt # for visualizing the results
+from sklearn import metrics # for roc_curve and auc methods
+
+fpr, tpr, thresholds = metrics.roc_curve(breakfast_true,breakfast_proba,pos_label=1)
+
+plt.plot(fpr,tpr) # plot the false positive rates (fpr) on the x-axis, and true positive rates (tpr
+plt.show()
+```
+
+
+
+Area Under the Curve (AUC) refers to the area under the ROC Curve. This is an indicator of how good
 
 ## Summary and Final Thoughts
 
-This Epicurious dataset contains an abundant of data and this project have only scratched the tip of the iceberg.
+
+
+This Epicurious dataset contains an abundant of data, and this project have only scratched the tip of the iceberg. I look forward to 
 
 <!--
 
