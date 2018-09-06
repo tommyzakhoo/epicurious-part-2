@@ -150,6 +150,7 @@ Perhaps breakfast, lunch, dinner recipes are just relatively easy to tell apart.
 Again, the following is a short summary of what I did here.
 
 - Implemented Monte-Carlo cross validation.
+- Obtained 87.17% average accuracy.
 - Evaluated the model with a confusion matrix.
 - Plotted ROC curve and calculated AUC values for the model.
 - Obtained good AUC numbers, ranging from 0.9088 to 0.9818.
